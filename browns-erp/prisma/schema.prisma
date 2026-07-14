@@ -1,0 +1,334 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum EmployeeCategory {
+  CABLING
+  SURVEY
+  SPLICING
+  ADMIN
+}
+
+enum ProjectPosition {
+  TECHNICIAN
+  TO
+  TEAM_LEADER
+}
+
+enum EmployeeStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum AttendanceStatus {
+  PRESENT
+  LEAVE
+  DAY_OFF
+}
+
+enum ClientName {
+  DIALOG
+  MOBITEL
+  SLT
+}
+
+enum VehicleType {
+  CAR
+  VAN
+  BOLERO
+  BOOM_TRUCK
+  MINI_LORRY
+}
+
+enum VehicleStatus {
+  ACTIVE
+  INACTIVE
+  TRANSFERRED
+}
+
+enum AgreementStatus {
+  OK
+  PENDING
+  HIRED
+}
+
+enum PettyCashPurpose {
+  LOAN
+  FUEL
+  PROJECT_PURPOSE
+  UTILITY
+}
+
+enum BillType {
+  ELECTRICITY
+  WATER
+}
+
+enum NonCompletionReason {
+  LACK_OF_MAN_POWER
+  WEATHER_DELAY
+  MATERIAL_SHORTAGE
+  EQUIPMENT_FAILURE
+  SITE_ACCESS_ISSUES
+  CLIENT_DELAY
+  OTHER
+}
+
+model Project {
+  code       String      @id
+  name       String
+  region     String
+  clientName ClientName?
+  startDate  DateTime?   @db.Date
+  endDate    DateTime?   @db.Date
+  isActive   Boolean     @default(true)
+
+  employees    Employee[]
+  attendances  Attendance[]
+  teamsPlans   TeamsPlan[]
+  pettyCashAdv PettyCashAdvance[]
+  vehicles     Vehicle[]
+  utilityBills UtilityBill[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model Employee {
+  empNo            String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  category         EmployeeCategory
+  teamName         String?
+  region           String
+  nameWithInitials String
+  fullName         String
+  projectPosition  ProjectPosition
+  address          String?
+  designation      String?
+  idNo             String           @unique @db.VarChar(20)
+  contactNo        String?
+  status           EmployeeStatus   @default(ACTIVE)
+  projectCode      String?
+  project          Project?         @relation(fields: [projectCode], references: [code], onDelete: SetNull, onUpdate: Cascade)
+  appointmentDate  DateTime?        @db.Date
+  emergencyName    String?
+  emergencyPhone   String?
+
+  attendance        Attendance[]
+  teamsPlans        TeamsPlan[]
+  pettyCashAdvances PettyCashAdvance[]
+  vehiclesDriven    Vehicle[]           @relation("vehicle_driver")
+  utilityBills      UtilityBill[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([category, status])
+  @@index([projectCode])
+  @@map("employees")
+}
+
+model Attendance {
+  id             String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  date           DateTime         @db.Date
+  projectCode    String
+  project        Project          @relation(fields: [projectCode], references: [code], onDelete: Restrict, onUpdate: Cascade)
+  region         String
+  client         ClientName?
+  employeeNo     String           @db.Uuid
+  employee       Employee         @relation(fields: [employeeNo], references: [empNo], onDelete: Restrict, onUpdate: Cascade)
+  teamLeaderName String?
+  status         AttendanceStatus @default(PRESENT)
+
+  @@unique([date, employeeNo])
+  @@index([date, projectCode])
+  @@index([projectCode])
+  @@index([employeeNo])
+  @@map("attendance")
+}
+
+model TeamsPlan {
+  id                String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  date              DateTime @db.Date
+  region            String
+  teamLeaderName    String?
+  supervisorNo      String   @db.Uuid
+  supervisor        Employee @relation(fields: [supervisorNo], references: [empNo], onDelete: Restrict, onUpdate: Cascade)
+  supervisorContact String?
+  siteRef           String?
+  workScope         String
+  projectCode       String
+  project           Project  @relation(fields: [projectCode], references: [code], onDelete: Restrict, onUpdate: Cascade)
+
+  dailyProgresses DailyProgress[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([date, region])
+  @@index([supervisorNo])
+  @@index([projectCode])
+  @@map("teams_plans")
+}
+
+model DailyProgress {
+  id                      String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  teamsPlanId             String              @db.Uuid
+  teamsPlan               TeamsPlan           @relation(fields: [teamsPlanId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  actualWorkDone          String?
+  reasonForNonCompletion  NonCompletionReason?
+  reasonOther             String?
+  remarks                 String?
+
+  @@index([teamsPlanId])
+  @@map("daily_progress")
+}
+
+model PettyCashAdvance {
+  referenceNo     String            @id
+  requestedDate   DateTime          @default(now()) @db.Date
+  projectCode     String
+  project         Project           @relation(fields: [projectCode], references: [code], onDelete: Restrict, onUpdate: Cascade)
+  purpose         PettyCashPurpose
+  amount          Decimal           @db.Decimal(12, 2)
+  recipientEmpNo  String            @db.Uuid
+  recipient       Employee          @relation(fields: [recipientEmpNo], references: [empNo], onDelete: Restrict, onUpdate: Cascade)
+  bankAccNo       String?
+  bankBranch      String?
+  remarks         String?
+  submittedAmount Decimal?          @db.Decimal(12, 2)
+  balance         Decimal?          @db.Decimal(12, 2)
+  cashReturn      Decimal?          @db.Decimal(12, 2)
+  cashReturnDate  DateTime?         @db.Date
+
+  pettyCashLedgers PettyCashLedger[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([projectCode])
+  @@index([recipientEmpNo])
+  @@map("petty_cash_advances")
+}
+
+model PettyCashLedger {
+  id              String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  advanceRefNo    String
+  advance         PettyCashAdvance @relation(fields: [advanceRefNo], references: [referenceNo], onDelete: Cascade, onUpdate: Cascade)
+  transactionDate DateTime        @default(now()) @db.Date
+  description     String
+  debitAmount     Decimal?        @db.Decimal(12, 2)
+  creditAmount    Decimal?        @db.Decimal(12, 2)
+  runningBalance  Decimal         @db.Decimal(12, 2) @default(0)
+
+  @@index([advanceRefNo])
+  @@map("petty_cash_ledger")
+}
+
+model Vehicle {
+  vehicleNo         String          @id @db.VarChar(20)
+  vehicleType       VehicleType
+  region            String
+  category          String?
+  teamLeaderName    String?
+  driverEmpNo       String?         @db.Uuid
+  driver            Employee?       @relation("vehicle_driver", fields: [driverEmpNo], references: [empNo], onDelete: SetNull, onUpdate: Cascade)
+  gpsStatus         Boolean         @default(false)
+  vehicleStatus     VehicleStatus   @default(ACTIVE)
+  ownerName         String?
+  ownerAddress      String?
+  ownerContact      String?
+  agreementStartDate DateTime?      @db.Date
+  agreementStatus   AgreementStatus @default(OK)
+  dailyTarget       Decimal?        @db.Decimal(10, 2)
+  commitmentCost    Decimal?        @db.Decimal(12, 2)
+  extraKmRate       Decimal?        @db.Decimal(8, 2)
+  projectCode       String?
+  project           Project?        @relation(fields: [projectCode], references: [code], onDelete: SetNull, onUpdate: Cascade)
+
+  dailyRunningLogs DailyRunningLog[]
+  fuelTransactions FuelTransaction[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([vehicleStatus])
+  @@index([projectCode])
+  @@map("vehicles")
+}
+
+model DailyRunningLog {
+  id              String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  date            DateTime @db.Date
+  vehicleNo       String   @db.VarChar(20)
+  vehicle         Vehicle  @relation(fields: [vehicleNo], references: [vehicleNo], onDelete: Cascade, onUpdate: Cascade)
+  onMeterReading  Decimal  @db.Decimal(10, 2)
+  endMeterReading Decimal  @db.Decimal(10, 2)
+  totalKm         Decimal  @db.Decimal(10, 2)
+  reason          String?
+  fuelMeter       Decimal? @db.Decimal(10, 2)
+
+  @@unique([date, vehicleNo])
+  @@index([vehicleNo, date])
+  @@map("daily_running_logs")
+}
+
+model FuelTransaction {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  date          DateTime @db.Date
+  vehicleNo     String   @db.VarChar(20)
+  vehicle       Vehicle  @relation(fields: [vehicleNo], references: [vehicleNo], onDelete: Cascade, onUpdate: Cascade)
+  fuelCardNo    String?
+  meterReading  Decimal  @db.Decimal(10, 2)
+  literPrice    Decimal  @db.Decimal(8, 2)
+  liters        Decimal  @db.Decimal(10, 2)
+  amount        Decimal  @db.Decimal(12, 2)
+  target        String?
+  targetMeter   Decimal? @db.Decimal(10, 2)
+  runningStatus String?
+
+  @@index([vehicleNo, date])
+  @@index([fuelCardNo])
+  @@map("fuel_transactions")
+}
+
+model UtilityBill {
+  refNo                     String     @id @db.VarChar(30)
+  entityName                String
+  address                   String?
+  projectCode               String
+  project                   Project    @relation(fields: [projectCode], references: [code], onDelete: Restrict, onUpdate: Cascade)
+  responsibleEngineerEmpNo  String     @db.Uuid
+  responsibleEngineer       Employee   @relation(fields: [responsibleEngineerEmpNo], references: [empNo], onDelete: Restrict, onUpdate: Cascade)
+  billType                  BillType
+  billingMonthYear          String
+  paidDate                  DateTime?  @db.Date
+  settlementVoucherNo       String?
+  paidAmount                Decimal    @db.Decimal(12, 2)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([projectCode, billType])
+  @@index([responsibleEngineerEmpNo])
+  @@map("utility_bills")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  username  String   @unique @db.VarChar(50)
+  password  String
+  role      String   @default("SUPERVISOR")
+  empNo     String?  @unique @db.Uuid
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
