@@ -1,0 +1,246 @@
+
+> temp-browns@0.1.0 start
+> next start
+
+▲ Next.js 16.2.10
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 202ms
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:51452
+    at iG (/app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:54134)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async rJ.do (/app/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:20930)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:51452
+    at iG (/app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:54134)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async rJ.do (/app/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:20930)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:51452
+    at iG (/app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:54134)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async rJ.do (/app/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:20930)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:51452
+    at iG (/app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:54134)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async rJ.do (/app/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:20930)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:51452
+    at iG (/app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:54134)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async rJ.do (/app/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:20930)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:51452
+    at iG (/app/.next/server/chunks/[root-of-the-server]__0kufiv8._.js:404:54134)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async rJ.do (/app/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:20930)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[31m[auth][error][0m UntrustedHost: Host must be trusted. URL was: http://localhost:3000/api/auth/session. Read more at https://errors.authjs.dev#untrustedhost
+    at /app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:51495
+    at cv (/app/.next/server/edge/chunks/[root-of-the-server]__0e6r5oa._.js:412:54190)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)

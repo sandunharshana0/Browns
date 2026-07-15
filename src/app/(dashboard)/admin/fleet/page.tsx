@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect, useCallback } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { format } from 'date-fns'
 import { cn } from '@/lib/utils'
 import type { VehicleDashboardResponse, FleetKpi, VehicleDashboardRow } from '@/types'
@@ -104,19 +104,28 @@ export default function FleetDashboard() {
 
   useEffect(() => {
     if (!selectedVehicle) return
-    setLoading(true)
-    fetchChart(selectedVehicle, month, year).then((data) => {
-      setChartData(data)
-      setLoading(false)
+
+    let active = true
+    Promise.resolve().then(() => {
+      if (active) setLoading(true)
     })
+
+    fetchChart(selectedVehicle, month, year).then((data) => {
+      if (active) {
+        setChartData(data)
+        setLoading(false)
+      }
+    })
+
+    return () => {
+      active = false
+    }
   }, [selectedVehicle, month, year])
 
   const kpis: FleetKpi = useMemo(() => {
     if (!chartData?.dailyData) return { totalKm: 0, totalFuelLiters: 0, totalFuelAmount: 0, avgKmPerLiter: null }
     return computeKpis(chartData.dailyData)
   }, [chartData])
-
-  const daysInMonth = new Date(year, month + 1, 0).getDate()
 
   const filteredRows = useMemo(() => {
     if (!chartData?.dailyData) return []
@@ -186,11 +195,19 @@ export default function FleetDashboard() {
             </svg>
             <input
               type="text"
+              list="vehicle-suggestions"
               placeholder="Search vehicle..."
               value={selectedVehicle}
               onChange={(e) => setSelectedVehicle(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 text-slate-700 text-sm rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-sm transition-all duration-200"
             />
+            <datalist id="vehicle-suggestions">
+              {vehicles.map((v) => (
+                <option key={v.vehicleNo} value={v.vehicleNo}>
+                  {v.vehicleNo} {v.vehicleType ? `(${v.vehicleType})` : ''}
+                </option>
+              ))}
+            </datalist>
           </div>
           <div className="flex gap-1 p-1 bg-slate-100/80 rounded-xl">
             {FILTER_TABS.map((tab) => (
