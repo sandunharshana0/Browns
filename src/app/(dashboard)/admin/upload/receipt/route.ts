@@ -22,10 +22,11 @@ export async function POST(request: Request) {
     const publicUrl = `/uploads/receipts/${fileName}`;
 
     return NextResponse.json({ success: true, url: publicUrl }, { status: 200 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('File Upload Error:', error);
+    const message = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: 'Upload failed', details: error.message },
+      { error: 'Upload failed', details: message },
       { status: 500 }
     );
   }

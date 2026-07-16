@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 
 const features = [
   {
@@ -179,9 +180,9 @@ export default function ERPPage() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <nav className="flex items-center gap-2 text-xs sm:text-sm text-gray-400 mb-4 md:mb-6 flex-wrap">
-                <a href="/" className="hover:text-white transition-colors">Home</a>
+                <Link href="/" className="hover:text-white transition-colors">Home</Link>
                 <span>/</span>
-                <a href="/products" className="hover:text-white transition-colors">Products</a>
+                <Link href="/products" className="hover:text-white transition-colors">Products</Link>
                 <span>/</span>
                 <span className="text-white">ERP</span>
               </nav>

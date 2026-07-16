@@ -16,9 +16,15 @@ interface PDFReportButtonProps {
   month: string;
 }
 
+interface ExtendedJsPDF extends jsPDF {
+  lastAutoTable?: {
+    finalY: number;
+  };
+}
+
 export default function PDFReportButton({ data, month }: PDFReportButtonProps) {
   const generatePDF = () => {
-    const doc = new jsPDF();
+    const doc = new jsPDF() as ExtendedJsPDF;
 
     // 🏢 1. Company Letterhead / Header Setup
     doc.setFont('helvetica', 'bold');
@@ -74,7 +80,7 @@ export default function PDFReportButton({ data, month }: PDFReportButtonProps) {
     });
 
     // ✍️ 4. Authorized Signature Block (Bottom Guard)
-    const finalY = (doc as any).lastAutoTable.finalY + 30;
+    const finalY = (doc.lastAutoTable?.finalY ?? 150) + 30;
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);
     doc.line(14, finalY, 70, finalY); // Signature Line
